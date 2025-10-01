@@ -36,7 +36,7 @@ export const elements = {
   registerPostalCode: '[name="postal_codeRegisterPage"]',
   agreeTerms: '[name="i_agree"]',
   btnRegister: '#register_btn',
-  btnNext: '.mobileBtnHandler > #next_btn',
+  btnNext: '#next_btn',
   safepayUsername: '[name="safepay_username"]',
   safepayPassword: '[name="safepay_password"]',
   btnSaveSafepay: '[name="save_safepay"]',
