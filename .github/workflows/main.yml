@@ -38,16 +38,10 @@ jobs:
         if: github.event_name != 'workflow_dispatch' || github.event.inputs.browser == 'chrome'
         uses: cypress-io/github-action@v6
         with:
-          parallel: true
-          record: true
           browser: chrome
-          config: retries=1
 
       - name: Run Cypress on Mozilla Firefox 🦊
         if: github.event.inputs.browser == 'firefox'
         uses: cypress-io/github-action@v6
         with:
-          parallel: true
-          record: true
           browser: firefox
-          config: retries=1
