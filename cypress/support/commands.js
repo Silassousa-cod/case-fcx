@@ -38,7 +38,9 @@ Cypress.Commands.add("registrationNewUser", () => {
 
       cy.get(elements.registerFirstName).type(faker.person.firstName());
       cy.get(elements.registerLastName).type(faker.person.lastName());
-      cy.get(elements.registerPhoneNumber).type(faker.phone.number().substring(0, 20));
+      cy.get(elements.registerPhoneNumber).type(
+        faker.phone.number().substring(0, 20)
+      );
       cy.get(elements.registerCountry).select("Brazil");
       cy.get(elements.registerCity).type(faker.location.city());
       cy.get(elements.registerAddress).type(faker.location.streetAddress());
@@ -54,12 +56,15 @@ Cypress.Commands.add("registrationNewUser", () => {
 
 Cypress.Commands.add("finishOrder", () => {
   cy.get(elements.btnNext).click();
-  cy.get(elements.safepayUsername).type(faker.person.firstName().substring(0, 5));
+  cy.get(elements.safepayUsername).type(
+    faker.person.firstName().substring(0, 5)
+  );
   const password = generatePassword();
   cy.get(elements.safepayPassword).type(password);
   cy.get(elements.btnSaveSafepay).click();
   cy.get(elements.btnPayNow).click();
-  
+
   cy.contains("Thank you for buying with Advantage").should("be.visible");
   cy.contains("Your order number is").should("be.visible");
+  cy.url().should("include", "orderPayment");
 });
