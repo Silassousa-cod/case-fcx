@@ -1,4 +1,4 @@
-# Projeto de Automação de Testes - Advantage Online Shopping
+# Projeto de Automação de Testes - Advantage Online Shopping - Case Fcx
 
 Este projeto contém testes automatizados de ponta a ponta (E2E) para o site [Advantage Online Shopping](https://www.advantageonlineshopping.com/), desenvolvidos com o framework Cypress.
 
