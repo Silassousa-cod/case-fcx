@@ -41,7 +41,7 @@ Siga os passos abaixo para configurar o ambiente de testes em sua máquina local
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <url-do-seu-repositorio>
+    git clone <url-do-repositorio>
     ```
 
 2.  **Navegue até a pasta do projeto:**
