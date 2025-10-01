@@ -47,6 +47,7 @@ Cypress.Commands.add("registrationNewUser", () => {
       cy.get(elements.registerState).type(faker.location.state(), {
         force: true,
       });
+      cy.wait(5000);
       cy.get(elements.registerPostalCode).type(faker.location.zipCode());
 
       cy.get(elements.agreeTerms).check();
