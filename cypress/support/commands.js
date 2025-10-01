@@ -8,7 +8,7 @@ Cypress.Commands.add("visitSite", () => {
   cy.url().should("eq", Cypress.config().baseUrl);
 });
 
-Cypress.Commands.add("selectProduct", (username, password) => {
+Cypress.Commands.add("selectProduct", () => {
   cy.get(elements.laptopImageId).click();
   cy.get(elements.laptopProductId).click();
   cy.get(elements.addMoreQuantity).click();
